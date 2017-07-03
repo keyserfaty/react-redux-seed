@@ -8,12 +8,21 @@ import { withHooks } from '../../../utils/withHooks';
 
 const List = props => {
   const { items, status, error } = props;
-  console.log(items)
 
   return (
     <div>
       <div>
-        holi 2
+        { status === 'pending' && <div>Is loading...</div> }
+        { status === 'failure' && <div>There was an error: {error}</div>}
+
+        { (status === 'success' && items.length !== 0) && (
+           <ul>
+             { items.map((item, i) => <li key={i}>{item.label}</li>) }
+           </ul>
+        )}
+        { (status === 'success' && items.length === 0) && (
+          <div>List is empty</div>
+        )}
       </div>
     </div>
   );
