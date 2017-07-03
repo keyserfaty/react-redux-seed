@@ -1,5 +1,5 @@
-//import create from './scenes/Create';
 import list from './scenes/List';
+//import create from './scenes/Create';
 //import edit from './scenes/Edit';
 import reducer from './reducers';
 
