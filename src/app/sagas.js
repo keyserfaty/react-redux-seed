@@ -1,4 +1,4 @@
-// import categories from '../modules/categories';
+import stock from '../modules/stock';
 
 import { fork } from 'redux-saga/effects';
 
@@ -9,5 +9,5 @@ function startSagas (...sagas) {
 }
 
 export default startSagas(
-  // ...categories.sagas
+   ...stock.sagas
 );

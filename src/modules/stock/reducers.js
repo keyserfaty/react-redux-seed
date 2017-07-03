@@ -1,9 +1,6 @@
-/* @flow */
-
 import { handleActions } from 'redux-actions';
 
 import * as actions from './actions';
-import type { State } from './models';
 
 const initialUiCreateFormData = {
   id: '',
@@ -16,7 +13,7 @@ const initialUiCreateFormData = {
   boughtPrice: ''
 };
 
-const initialState: State = {
+const initialState = {
   status: 'init',
   error: '',
   items: [],

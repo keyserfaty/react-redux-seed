@@ -1,6 +1,6 @@
-import create from './scenes/Create';
+//import create from './scenes/Create';
 import list from './scenes/List';
-import edit from './scenes/Edit';
+//import edit from './scenes/Edit';
 import reducer from './reducers';
 
 import sagas from './sagas';
@@ -19,7 +19,7 @@ export default {
   ],
   scenes: {
     list,
-    create,
-    edit
+    //create,
+    //edit
   }
 };

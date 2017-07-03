@@ -2,12 +2,12 @@ import { routerReducer as routing } from 'react-router-redux';
 import { reducer as asyncReducer } from 'make-action-creator/dist/reducer';
 import { combineReducers } from 'redux';
 
-// import stock from '../modules/stock';
+ import stock from '../modules/stock';
 
 const appReducer = combineReducers({
   routing,
   async: asyncReducer,
-  // [stock.constants.NAMESPACE]: stock.reducer
+   [stock.constants.NAMESPACE]: stock.reducer
 });
 
 const rootReducer = (state, action) => {

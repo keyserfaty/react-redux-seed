@@ -9,7 +9,6 @@ import * as selectors from './selectors';
 export function * fetchAllWorker () {
   yield put(actions.fetchAll.start());
 
-  //* TODO: add a `race` condition to see if action timeouts
   const { res: items, error } = yield call(get, 'products');
 
   if (error) {

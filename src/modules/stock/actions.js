@@ -2,11 +2,11 @@ import makeActionCreator from 'make-action-creator';
 
 import { NAMESPACE } from './constants';
 
-export const fetchAll = makeActionCreator(NAMESPACE + '/fetchAll', {rrSpinner: true});
-export const fetchOne = makeActionCreator(NAMESPACE + '/fetchOne', {rrSpinner: true});
-export const update = makeActionCreator(NAMESPACE + '/update', {rrSpinner: true});
-export const remove = makeActionCreator(NAMESPACE + '/remove', {rrSpinner: true});
-export const create = makeActionCreator(NAMESPACE + '/create', {rrSpinner: true});
+export const fetchAll = makeActionCreator(NAMESPACE + '/fetchAll');
+export const fetchOne = makeActionCreator(NAMESPACE + '/fetchOne');
+export const update = makeActionCreator(NAMESPACE + '/update');
+export const remove = makeActionCreator(NAMESPACE + '/remove');
+export const create = makeActionCreator(NAMESPACE + '/create');
 
 //* ui
 export const onChange = makeActionCreator(NAMESPACE + '/onChange');
