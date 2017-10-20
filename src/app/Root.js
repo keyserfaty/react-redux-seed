@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { Router } from 'react-router';
-import { Provider } from 'react-redux';
-import routes from './AppRouter';
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import { Router } from "react-router"
+import { Provider } from "react-redux"
+import routes from "./AppRouter"
 
 class Root extends Component {
   render () {
-    const { store, history } = this.props;
+    const { store, history } = this.props
     return (
       <Provider store={store}>
         <Router
@@ -14,13 +15,13 @@ class Root extends Component {
           routes={routes}
         />
       </Provider>
-    );
+    )
   }
 }
 
 Root.propTypes = {
-  history: React.PropTypes.object.isRequired,
-  store: React.PropTypes.object.isRequired
-};
+  history: PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired
+}
 
-export default Root;
+export default Root

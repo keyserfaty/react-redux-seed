@@ -1,13 +1,13 @@
-import list from './scenes/List';
+import list from "./scenes/List"
 //import create from './scenes/Create';
 //import edit from './scenes/Edit';
-import reducer from './reducers';
+import reducer from "./reducers"
 
-import sagas from './sagas';
+import sagas from "./sagas"
 
-import * as selectors from './selectors';
-import * as constants from './constants';
-import * as actions from './actions';
+import * as selectors from "./selectors"
+import * as constants from "./constants"
+import * as actions from "./actions"
 
 export default {
   selectors,
@@ -22,4 +22,4 @@ export default {
     //create,
     //edit
   }
-};
+}

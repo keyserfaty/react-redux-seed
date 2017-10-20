@@ -1,1 +1,1 @@
-export const ASYNC_STATUSES = ['init', 'pending', 'success', 'failure'];
+export const ASYNC_STATUSES = ["init", "pending", "success", "failure"]

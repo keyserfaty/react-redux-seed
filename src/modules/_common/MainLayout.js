@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react"
+import PropTypes from "prop-types"
 
 const MainLayout = props => {
   return (
@@ -6,6 +7,10 @@ const MainLayout = props => {
       {props.children}
     </div>
   )
-};
+}
 
-export default MainLayout;
+MainLayout.propTypes = {
+  children: PropTypes.any,
+}
+
+export default MainLayout

@@ -1,5 +1,5 @@
-import { NAMESPACE } from './constants';
+import { NAMESPACE } from "./constants"
 
-export const getItems = state => state[NAMESPACE].items;
-export const getStatus = state => state[NAMESPACE].status;
-export const getError = state => state[NAMESPACE].error;
+export const getItems = state => state[NAMESPACE].items
+export const getStatus = state => state[NAMESPACE].status
+export const getError = state => state[NAMESPACE].error
