@@ -2,28 +2,10 @@ import { handleActions } from 'redux-actions';
 
 import * as actions from './actions';
 
-const initialUiCreateFormData = {
-  id: '',
-  label: '',
-  name: '',
-  quantity: '',
-  image: '',
-  categories: '',
-  salePrice: '',
-  boughtPrice: ''
-};
-
 const initialState = {
   status: 'init',
   error: '',
   items: [],
-  ui: {
-    removeCandidate: '',
-    editCandidate: '',
-    create: {
-      formData: initialUiCreateFormData
-    }
-  }
 };
 
 const reducer = handleActions({
@@ -87,84 +69,6 @@ const reducer = handleActions({
       removeCandidate: ''
     }
   }),
-
-  [actions.onChange.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      create: {
-        ...state.ui.create,
-        formData: {
-          ...state.ui.create.formData,
-          ...action.payload
-        }
-      }
-    }
-  }),
-
-  [actions.onRemoveCandidate.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      removeCandidate: action.payload.id
-    }
-  }),
-
-  [actions.onEditCandidate.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      editCandidate: action.payload.id
-    }
-  }),
-
-  [actions.onImage.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      create: {
-        ...state.ui.create,
-        formData: {
-          ...state.ui.create.formData,
-          image: action.payload.file
-        }
-      }
-    }
-  }),
-
-  [actions.onRemoveImage.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      create: {
-        ...state.ui.create,
-        formData: {
-          ...state.ui.create.formData,
-          image: ''
-        }
-      }
-    }
-  }),
-
-  [actions.cleanForm.type]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      create: {
-        ...state.ui.create,
-        formData: initialUiCreateFormData
-      }
-    }
-  }),
-
-  [actions.closeAlertBox.type]: (state, action) => ({
-    ...state,
-    status: 'init',
-    error: null
-  }),
-
-  [actions.cleanState.type]: (state, action) =>
-    initialState
 
 }, initialState);
 

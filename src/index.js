@@ -5,8 +5,6 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './app/configureStore';
 
 //* Libs
-import 'sweetalert/dist/sweetalert.css';
-
 import RootComponent from './app/Root';
 
 const store = configureStore();
